@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Patrick+Hand&family=Roboto:ital,wght@0,300;1,300&display=swap');
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #309130;
+  font-family: 'Roboto', sans-serif;
+}
+/* btn styles */
+:root {
+  --ClearBtn_backgroundColor: #0000ff9c;
+  --EmptyListBtn_backgroundColor: #a52a2a;
+  --savelistBtn_backgroundColor: #6ecc6e;
+  --addBtn_backgroundColor: #7777faf5;
+  --addBtn_padding: 6px 22px 6px 22px;
+  --textColor: #ffffff;
+  --borderRadius: 15px;
+  --padding: 4px 20px 5px 20px;
+  --Btnmargin: 25px 10px 0px 10px;
+  --pointer: pointer;
+  --system-ui: system-ui;
+}
+#TodoList_container {
+  background-color: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 40px 65px 40px 65px;
+  width:auto;
+  transform: translate(-50%, -50%);
+  border-radius: 18px;
+}
+.Todo_name {
+  line-height: 1px;
+  font-family: "Patrick Hand", cursive;
+}
+
+#TodoName_enclosure{
+    position: relative;
+    top: -17px;
+}
+p{
+    font-style: oblique;
+    font-size: 20px;
+    opacity: 0.6;
+}
+.clear_completedBtn {
+  color: var(--textColor);
+  background-color: var(--ClearBtn_backgroundColor);
+  border: none;
+  outline: none;
+  padding: var(--padding);
+  border-radius: var(--borderRadius);
+  cursor: var(--pointer);
+  font-family: var(--system-ui);
+}
+.Empty_ListBtn {
+  color: var(--textColor);
+  border-radius: var(--borderRadius);
+  padding: var(--padding);
+  background-color: var(--EmptyListBtn_backgroundColor);
+  margin: var(--Btnmargin);
+  cursor: var(--pointer);
+  font-family: var(--system-ui);
+  border: none;
+  outline: none;
+}
+.Save_ListBtn {
+  border-radius: var(--borderRadius);
+  padding: var(--padding);
+  background-color: var(--savelistBtn_backgroundColor);
+  color: var(--textColor);
+  cursor: var(--pointer);
+  font-family: var(--system-ui);
+  border: none;
+  outline: none;
+}
+
+.add_btn {
+  background-color: var(--addBtn_backgroundColor);
+  color: var(--textColor);
+  padding: var(--addBtn_padding);
+  cursor: var(--pointer);
+  border-radius: var(--borderRadius);
+  border: none;
+  outline: none;
+}
+
+input {
+  border-width: 1.4px;
+  border-color: #0000002d;
+  border-radius: 3px;
+  outline-color: #ff69a8;
+  padding: 4px 0px 4px 0px;
+  cursor: var(--pointer);
+}
+.Todos {
+  padding: 7px 40px 0px 8px;
+}
+
+li {
+  margin: 5px;
+  font-family: system-ui;
+}
+
+li:nth-of-type(2) {
+  background-color: rgba(128, 128, 128, 0.349);
+  padding: var(--padding);
+  --padding: 2px;
+  text-decoration: line-through;
+}
+
+@media (max-width:974px){
+    .btn_container{
+        display: flex;
+        flex-direction: column-reverse;
+        width:200px;
+        margin: 0px auto;
+    }
+    .clear_completedBtn,.Save_ListBtn,.Empty_ListBtn{
+        margin: 4px;
+        padding-left: 9px;
+        padding-right: 0px;
+    }
+
+.Input_btn_Container{
+    width:max-content;
+}
+ h1,p{
+    text-align: center;
+    line-height: 23px;
+    padding:10px;
+}
+#TodoList_container{
+    max-width: 217px;
+}
+}
+
+@media (max-width:974px){
+    .Input_btn_Container{
+        position: absolute;
+        left: 19px;
+    }
+    ol{
+        position: relative;
+        left: -19px;
+    }  
+    li:nth-of-type(2) {
+        width:120px;
+    }
+}
