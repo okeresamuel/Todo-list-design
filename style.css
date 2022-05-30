@@ -5,6 +5,7 @@ body {
   box-sizing: border-box;
   background-color: #309130;
   font-family: 'Roboto', sans-serif;
+  -webkit-tap-highlight-color:transparent;
 }
 /* btn styles */
 :root {
